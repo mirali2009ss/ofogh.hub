@@ -1,0 +1,194 @@
+/* استایل‌های CSS از پاسخ قبلی */
+body {
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+     direction: rtl;
+     background-color: rgb(0, 0, 0);
+}
+
+/* ... کدهای قبلی ... */
+.modal {
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* --- این قسمت را تغییر دهید --- */
+    background-image: url('122.jpg'); /* آدرس عکس پس‌زمینه خود را اینجا بگذارید */
+    background-size: cover; /* مطمئن می‌شود عکس کل صفحه را پوشش می‌دهد */
+    background-position: center; /* عکس را در مرکز قرار می‌دهد */
+    /* background-attachment: fixed;  اگر می‌خواهید موقع اسکرول ثابت بماند */
+    /* --- پایان تغییرات --- */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+/* ... کدهای بعدی ... */
+
+.modal-content {
+    background-color: #25282b;
+    padding: 30px;
+    border: 1px ;
+    width: 70%; 
+    max-width: 400px;
+    border-radius: 5px;
+    
+}
+.text-pass {
+ color: rgb(231, 231, 231);
+}
+#password-input {
+    background-color:  #45494c8f;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid  #4a4f53;
+    border-radius: 5px;
+}
+
+button {
+    
+    background-color: #45494c8f;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c94040;
+    color: #1d1e1f;
+}
+
+.error-text {
+    color: red;
+    margin-top: 10px;
+}
+/* استایل‌های عمومی */
+
+
+/* --- استایل هدر --- */
+.main-header {
+    background-color: #030303;
+    color: #c94040;
+    margin: -10px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #c94040;
+}
+.ad-head{
+    justify-content: center;
+    display: flex;
+}
+.main-header-ad-info{
+background-color: #4a4f53;
+color: #818181;
+display: flex;
+margin: -10px;
+padding: 9px 10px;
+padding-top: 15px;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+.box-ad{
+    background-color: #4a4f53;
+    border: 3px solid #808080;
+    display: block;
+    margin-top: 50px;
+    width: 40%;
+    height: 150px;
+   
+}
+.logo {
+    margin-left: 47%;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* آیکون منوی همبرگری */
+.menu-toggle {
+   
+    font-size: 2em;
+    text-decoration: none;
+    color: #c94040;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* --- استایل سایدبار (پنل کشویی) --- */
+.sidebar {
+    border-left: 3px solid #c94040;
+    height: 100%; /* ارتفاع کامل صفحه */
+    width: 300px; /* عرض پنل */
+    position: fixed; /* ثابت بماند */
+    top: 0;
+    right: 0; /* از سمت راست باز شود */
+    background-color: #030303;
+    padding-top: 60px; /* فضای بالا برای دکمه بستن و هدر */
+    box-shadow: -3px 0 7px rgba(0, 0, 0, 0.2);
+    z-index: 200; /* بالاتر از هدر */
+    
+    /* تنظیم اولیه: سایدبار مخفی است و کاملاً به راست منتقل شده */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out; /* انیمیشن نرم */
+}
+
+/* ترفند نمایش با CSS-only (وقتی دکمه منو فشرده می شود) */
+/* وقتی آیدی سایدبار در URL باشد (با زدن دکمه)، آن را نمایش بده */
+.sidebar:target {
+    transform: translateX(0); /* به موقعیت اصلی برگردانده شود (نمایش) */
+}
+
+/* دکمه بستن (X) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px; /* در گوشه بالا و سمت چپ سایدبار */
+    font-size: 36px;
+    color: #818181;
+    text-decoration: none;
+}
+.logo-cloes{
+    position: absolute;
+    top: 10px;
+    left: 200px; /* در گوشه بالا و سمت چپ سایدبار */
+    font-size: 36px;
+    color: #c94040;
+    text-decoration: none;
+}
+
+/* استایل لیست گزینه‌ها */
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #818181;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.sidebar nav li a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* استایل محتوای اصلی (برای مثال) */
