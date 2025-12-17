@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" >
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه با رمز عبور</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body >
+
+    <div id="password-modal" class="modal" >
+        <div class="modal-content">
+            <h3 class="text-pass">Enter the password</h3>
+            <input type="password" id="password-input" placeholder="password" >
+            <button onclick="checkPassword()">Enter</button>
+            <p id="error-message" class="error-text"></p>
+        </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <header class="main-header">
+            <a href="#sidebar-menu" class="menu-toggle" title="باز کردن منو">&#9776;</a>
+            <div class="logo">LOGO</div>
+        </header>
+    
+        <div id="sidebar-menu" class="sidebar">
+            <a href="#" class="close-btn" title="بستن منو">&times;</a>
+            <a href="#" class="logo-cloes"  title="بستن منو">logo</a>
+            <nav>
+                <ul>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">ارتباط</a></li>
+                    <li><a href="#">درس‌ها</a></li>
+                    <li><a href="#">خانه</a></li>
+                    <li><a href="#">ارتباط</a></li>
+                    <li><a href="#">درس‌ها</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <header class=" main-header-ad-info">Ad Information</header>
+        <dev class="ad-head"><div class="box-ad"></div>
+
+            
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
